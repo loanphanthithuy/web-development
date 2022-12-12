@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <iframe id="mapFrame"
+            src = "http://www.google.com/maps?q=katajakatu 8&output=embed"
+            width = 50% height="300px" frameBorder="0">
+        </iframe>
+        <title>Basic place searching</title>
+        <h1>Search for a place</h1>
+        <label >Address:</label>
+        <input type="text" placeholder="Type street name" id="address"/>
+        <label >City:</label><input type="text" placeholder="Type city name" id="city"/>
+        <button type="button" onclick = findAdress()>Search</button>
+     
+        <script>
+            function findAdress(){
+                var add = document.getElementById("address").value;
+                var city = document.getElementById("city").value;
+                document.getElementById('mapFrame').src = "http://www.google.com/maps?q="+add+city+"&output=embed";
+            }
+        </script>
+    </body>
+</html>
